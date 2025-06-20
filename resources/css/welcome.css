@@ -1,0 +1,84 @@
+body, html {
+    height: 100%;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.center-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 1rem;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
+}
+
+.btn-custom {
+    width: 140px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 30px;
+    padding: 0.75rem 1rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-custom:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+}
+
+.btn-login {
+    background-color: #007bff;
+    border: none;
+    color: white;
+}
+
+.btn-register {
+    background-color: #28a745;
+    border: none;
+    color: white;
+}
+
+.btn-login:hover {
+    background-color: #0056b3;
+}
+
+.btn-register:hover {
+    background-color: #1e7e34;
+
+
+}
+
+.btn-dashboard {
+    background-color: #ffc107;
+    border: none;
+    color: #000;
+}
+
+.btn-dashboard:hover {
+    background-color: #e0a800;
+    color: #000;
+}
+
+
+
+@media (max-width: 576px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .btn-custom {
+        width: 120px;
+        font-size: 1rem;
+    }
+}
