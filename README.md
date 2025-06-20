@@ -1,51 +1,57 @@
-♟️ Chess Puzzle Trainer
-Laravel aplikacija za unos, upravljanje i rješavanje šahovskih zagonetki.
+# ♟️ Chess Puzzle Trainer
 
-🔧 Tehnologije
-PHP 8.x
+**Laravel aplikacija za unos, upravljanje i rješavanje šahovskih zagonetki.**
 
-Laravel 10.x
+---
 
-MySQL
+## 🔧 Tehnologije
 
-Blade Templates
+- PHP 8.x  
+- Laravel 10.x  
+- MySQL  
+- Blade Templates  
+- Bootstrap 5  
+- Chessboard.js + Chess.js za prikaz i validaciju poteza
 
-Bootstrap 5
+---
 
-Chessboard.js + Chess.js za prikaz i validaciju poteza
+## 🚀 Pokretanje projekta
 
-🚀 Pokretanje projekta
 Slijedite ove korake za pokretanje projekta na vašem lokalnom stroju:
 
-Kloniraj repozitorij
+1. **Kloniraj repozitorij**  
+   ```bash
+   git clone https://github.com/ivanabramusic/Chess-puzzle-trainer.git
+   cd Chess-puzzle-trainer
 
-git clone https://github.com/ivanabramusic/Chess-puzzle-trainer.git
-cd Chess-puzzle-trainer
+2. **Instaliraj PHP ovisnosti**
+    composer install
+   
+3. **Instaliraj JavaScript ovisnosti (uključujući chess.js i chessboardjs)**
+    npm install
+    npm install chess.js @chrisoakman/chessboardjs
 
-Instaliraj ovisnosti
+4. **Pokreni izgradnju frontenda**
+    npm run dev
 
-composer install
-npm install && npm run dev
+5. **Kopiraj .env datoteku i generiraj aplikacijski ključ**
+    cp .env.example .env
+    php artisan key:generate
 
-Kopiraj .env datoteku i generiraj ključ
+6. **Postavi bazu podataka**
+    DB_CONNECTION=mysql
+    DB_HOST=127.0.0.1
+    DB_PORT=3306
+    DB_DATABASE=chess_db       # <-- ovdje unesite naziv baze podataka
+    DB_USERNAME=root           # <-- korisničko ime za bazu
+    DB_PASSWORD=
+    
+7. **Migriraj tablice**
+    php artisan migrate
+    
+8. **Pokreni Laravel development server**
+   php artisan serve
 
-cp .env.example .env
-php artisan key:generate
+9. **Otvori aplikaciju**
+    U pregledniku posjeti: http://localhost:8000
 
-Postavi bazu podataka
-U .env datoteci unesi podatke za svoju MySQL bazu:
-
-DB_CONNECTION=mysql
-DB_HOST=127.0.0.1
-DB_PORT=3306
-DB_DATABASE=chess_db # <--- Ovdje unesite naziv vaše baze podataka
-DB_USERNAME=root     # <--- Ovdje unesite korisničko ime za bazu podataka
-DB_PASSWORD=         # <--- Ovdje unesite lozinku za bazu podataka
-
-Migriraj tablice i pokreni aplikaciju
-
-php artisan migrate
-php artisan serve
-
-Pokreni aplikaciju
-Otvori http://localhost:8000 u svom pregledniku.
